@@ -1,40 +1,29 @@
 #pragma once
 
 #include <GLFW/glfw3.h>
-#include <iostream>
 
 namespace Core {
 class Window {
 public:
-  Window() {
-    std::cout << "WINDOW CREATED" << '\n';
+  static Window &Get();
+  static void Destroy();
 
-    GLFWwindow *window;
+  Window(const Window &) = delete;
+  Window &operator=(const Window &) = delete;
+  Window(Window &&) = delete;
+  Window &operator=(Window &&) = delete;
 
-    /* Initialize the library */
-    if (!glfwInit())
-      std::cout << "Error initing glfw" << '\n';
+  void Create();
+  void StartGameLoop();
 
-    /* Create a windowed mode window and its OpenGL context */
-    window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
-    if (!window) {
-      glfwTerminate();
-      // throw err
-    }
+private:
+  Window();
+  ~Window();
 
-    /* Make the window's context current */
-    glfwMakeContextCurrent(window);
+private:
+  GLFWwindow *m_window = nullptr;
 
-    /* Loop until the user closes the window */
-    while (!glfwWindowShouldClose(window)) {
-      /* Swap front and back buffers */
-      glfwSwapBuffers(window);
-
-      /* Poll for and process events */
-      glfwPollEvents();
-    }
-
-    glfwTerminate();
-  }
+  static Window *s_instance;
 };
+
 } // namespace Core

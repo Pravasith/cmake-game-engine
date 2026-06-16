@@ -1,14 +1,4 @@
-add_library(
-  Core STATIC
-  # Application.cpp
-)
-
-# target_include_directories(Core PUBLIC ${ENGINE_INCLUDE_DIR})
-#
-# install(TARGETS Core)
-
-# install(FILES ${ENGINE_INCLUDE_DIR}/Coffee/Core/Application.h DESTINATION
-# include/Coffee/Core)
+add_library(Core STATIC)
 
 target_sources(
   Core
@@ -24,7 +14,7 @@ target_sources(
           #
           FILES
           ${ENGINE_INCLUDE_DIR}/Coffee/Core/Window.h
-  PRIVATE Application.cpp)
+  PRIVATE Application.cpp Window.cpp)
 
 target_link_libraries(Core PRIVATE glfw)
 

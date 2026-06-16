@@ -1,11 +1,14 @@
 #include "Coffee/Core/Application.h"
-
-#include <iostream>
-#include <ostream>
+#include "Coffee/Graphics/Graphics.h"
 
 int main() {
-  std::cout << "I'm inside game application" << std::endl;
   Core::Application &appInstance = Core::Application::Get();
+  Gfx::Graphics &gfxInstance = Gfx::Graphics::Get();
+
+  appInstance.Init();
+
+  Core::Application::Destroy();
+  Gfx::Graphics::Destroy();
 
   return 0;
 }

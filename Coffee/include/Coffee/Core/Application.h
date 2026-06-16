@@ -1,6 +1,8 @@
 #pragma once
 
 namespace Core {
+class Window;
+
 class Application {
 public:
   static Application &Get();
@@ -11,11 +13,15 @@ public:
   Application(Application &&) = delete;
   Application &operator=(Application &&) = delete;
 
-private:
-  Application() {}
-  ~Application() = default;
+  void Init();
 
 private:
+  Application();
+  ~Application();
+
+private:
+  Window *m_window = nullptr;
+
   static Application *s_instance;
 };
 
