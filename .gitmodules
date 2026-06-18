@@ -1,3 +1,9 @@
 [submodule "third-party/glfw"]
 	path = third-party/glfw
 	url = git@github.com:glfw/glfw.git
+[submodule "third-party/vulkan-headers"]
+	path = third-party/vulkan-headers
+	url = git@github.com:KhronosGroup/Vulkan-Headers.git
+[submodule "third-party/vulkan-loader"]
+	path = third-party/vulkan-loader
+	url = git@github.com:KhronosGroup/Vulkan-Loader.git

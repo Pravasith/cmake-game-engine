@@ -15,6 +15,7 @@ target_sources(game PRIVATE game.cpp)
 
 # OPTION 2: Build the ext lib from source
 add_subdirectory(../Coffee third_party/Coffee_dir)
-target_link_libraries(game PRIVATE Core Graphics)
+# target_link_libraries(game PRIVATE Core Graphics)
+target_link_libraries(game PRIVATE Coffee)
 
 install(TARGETS game)

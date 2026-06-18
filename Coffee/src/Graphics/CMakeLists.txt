@@ -8,5 +8,3 @@ target_sources(
   PRIVATE Graphics.cpp)
 
 target_link_libraries(Graphics PRIVATE Renderer)
-
-install(TARGETS Graphics FILE_SET HEADERS)

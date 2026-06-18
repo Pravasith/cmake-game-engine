@@ -1,6 +1,7 @@
 #pragma once
 
 namespace Gfx {
+
 class Renderer {
 public:
   static Renderer &Get();
@@ -11,7 +12,7 @@ public:
   Renderer(Renderer &&) = delete;
   Renderer &operator=(Renderer &&) = delete;
 
-  // void Init();
+  void Init();
 
 private:
   Renderer();

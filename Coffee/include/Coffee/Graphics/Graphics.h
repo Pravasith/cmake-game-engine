@@ -1,6 +1,8 @@
 #pragma once
 
 namespace Gfx {
+class Renderer;
+
 class Graphics {
 public:
   static Graphics &Get();
@@ -11,13 +13,15 @@ public:
   Graphics(Graphics &&) = delete;
   Graphics &operator=(Graphics &&) = delete;
 
-  // void Init();
+  void Init();
 
 private:
   Graphics();
   ~Graphics();
 
 private:
+  Renderer *m_renderer = nullptr;
+
   static Graphics *s_instance;
 };
 
