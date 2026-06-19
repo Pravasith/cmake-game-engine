@@ -13,9 +13,14 @@ target_sources(game PRIVATE game.cpp)
 # target_link_libraries(game PRIVATE ${engineLibFileLocation} glfw)
 # --- BAD ---
 
-# OPTION 2: Build the ext lib from source
-add_subdirectory(../Coffee third_party/Coffee_dir)
-# target_link_libraries(game PRIVATE Core Graphics)
-target_link_libraries(game PRIVATE Coffee)
+# --- GOOD ---
+find_package(Coffee REQUIRED PATHS ../install)
+target_link_libraries(game PRIVATE Coffee::Coffee)
+# OR target_link_libraries(game PRIVATE Coffee::Core Coffee::Graphics)
+# --- GOOD ---
+
+# # OPTION 2: Build the ext lib from source add_subdirectory(../Coffee
+# third_party/Coffee_dir) # target_link_libraries(game PRIVATE Core Graphics)
+# target_link_libraries(game PRIVATE Coffee)
 
 install(TARGETS game)
