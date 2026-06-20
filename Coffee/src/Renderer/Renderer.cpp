@@ -1,3 +1,4 @@
+#include "Coffee/Logs.h"
 #define VULKAN_HPP_NO_STRUCT_CONSTRUCTORS
 
 #include "Coffee/Renderer/Renderer.h"
@@ -10,13 +11,17 @@
 import vulkan_hpp;
 #endif
 
+namespace Coffee {
 namespace Gfx {
 Renderer *Renderer::s_instance = new Renderer();
 
 vk::Instance vkInstance;
 
-Renderer::Renderer() { std::cout << "Renderer Created" << '\n'; }
-Renderer::~Renderer() { std::cout << "Renderer Destroyed" << '\n'; }
+Renderer::Renderer(){COFFEE_PRINT("Renderer Created")}
+
+Renderer::~Renderer() {
+  COFFEE_PRINT("Renderer Destroyed")
+}
 
 void Renderer::Init() {
   constexpr vk::ApplicationInfo appInfo{
@@ -45,3 +50,4 @@ void Renderer::Destroy() {
 }
 
 } // namespace Gfx
+} // namespace Coffee

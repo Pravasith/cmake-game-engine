@@ -1,5 +1,6 @@
 #pragma once
 
+namespace Coffee {
 namespace Core {
 class Window;
 
@@ -26,3 +27,4 @@ private:
 };
 
 } // namespace Core
+} // namespace Coffee

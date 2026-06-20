@@ -4,6 +4,8 @@
 #include "Coffee/Coffee.h"
 
 int main() {
+  using namespace Coffee;
+
   Core::Application &appInstance = Core::Application::Get();
   Gfx::Graphics &gfxInstance = Gfx::Graphics::Get();
 

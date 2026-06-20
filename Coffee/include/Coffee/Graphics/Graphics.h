@@ -1,6 +1,8 @@
 #pragma once
 
+namespace Coffee {
 namespace Gfx {
+
 class Renderer;
 
 class Graphics {
@@ -26,3 +28,4 @@ private:
 };
 
 } // namespace Gfx
+} // namespace Coffee

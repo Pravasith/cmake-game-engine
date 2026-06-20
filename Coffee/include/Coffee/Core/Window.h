@@ -2,6 +2,7 @@
 
 #include <GLFW/glfw3.h>
 
+namespace Coffee {
 namespace Core {
 class Window {
 public:
@@ -27,3 +28,5 @@ private:
 };
 
 } // namespace Core
+
+} // namespace Coffee

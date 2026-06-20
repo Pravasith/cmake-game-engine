@@ -1,7 +1,7 @@
 #pragma once
 
+namespace Coffee {
 namespace Gfx {
-
 class Renderer {
 public:
   static Renderer &Get();
@@ -23,3 +23,4 @@ private:
 };
 
 } // namespace Gfx
+} // namespace Coffee

@@ -12,6 +12,18 @@ target_sources(
 
 target_link_libraries(Coffee INTERFACE Core Graphics)
 
+target_compile_definitions(
+  Core
+  PUBLIC $<$<AND:$<CONFIG:Debug>,$<BOOL:${COFFEE_CORE_DEBUG}>>:COFFEE_DEBUG>)
+target_compile_definitions(
+  Graphics
+  PUBLIC $<$<AND:$<CONFIG:Debug>,$<BOOL:${COFFEE_GRAPHICS_DEBUG}>>:COFFEE_DEBUG>
+)
+target_compile_definitions(
+  Renderer
+  PUBLIC $<$<AND:$<CONFIG:Debug>,$<BOOL:${COFFEE_RENDERER_DEBUG}>>:COFFEE_DEBUG>
+)
+
 # --- INSTALL LIBS ---
 
 install(

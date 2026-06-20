@@ -1,12 +1,17 @@
 #include "Coffee/Graphics/Graphics.h"
+#include "Coffee/Logs.h"
 #include "Coffee/Renderer/Renderer.h"
-#include <iostream>
 
+namespace Coffee {
 namespace Gfx {
 Graphics *Graphics::s_instance = new Graphics();
 
-Graphics::Graphics() { std::cout << "Graphics Created" << '\n'; }
-Graphics::~Graphics() { std::cout << "Graphics Destroyed" << '\n'; }
+Graphics::Graphics(){COFFEE_PRINT("Graphics Created")}
+
+Graphics::~Graphics() {
+  Renderer::Destroy();
+  COFFEE_PRINT("Graphics Destroyed")
+}
 
 void Graphics::Init() {
   m_renderer = &Renderer::Get();
@@ -23,3 +28,4 @@ void Graphics::Destroy() {
   }
 }
 } // namespace Gfx
+} // namespace Coffee

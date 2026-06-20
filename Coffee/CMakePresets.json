@@ -9,8 +9,12 @@
       "installDir": "${sourceDir}/../install",
       "cacheVariables": {
         "CMAKE_CXX_STANDARD": "20",
+        "CMAKE_CXX_STANDARD_REQUIRED": "ON",
         "CMAKE_BUILD_TYPE": "Debug",
-        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+        "COFFEE_CORE_DEBUG": "OFF",
+        "COFFEE_GRAPHICS_DEBUG": "ON",
+        "COFFEE_RENDERER_DEBUG": "OFF"
       }
     }
   ]

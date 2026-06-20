@@ -1,14 +1,22 @@
 #include "Coffee/Core/Application.h"
 #include "Coffee/Core/Window.h"
-#include <iostream>
+#include "Coffee/Logs.h"
 
+namespace Coffee {
 namespace Core {
 Application *Application::s_instance = new Application();
 
-Application::Application() { std::cout << "Application Created" << '\n'; }
+Application::Application() {
+  COFFEE_PRINT("Application Created")
+
+#ifdef COFFEE_Debug
+  std::cout << "Hey COFFEE_Debug is defined in Core target" << '\n';
+#endif
+}
+
 Application::~Application() {
   Window::Destroy();
-  std::cout << "Application Destroyed" << '\n';
+  COFFEE_PRINT("Application Destroyed")
 }
 
 void Application::Init() {
@@ -29,3 +37,4 @@ void Application::Destroy() {
 }
 
 } // namespace Core
+} // namespace Coffee
