@@ -2,11 +2,9 @@
   "version": 4,
   "configurePresets": [
     {
-      "name": "Coffee",
-      "displayName": "Coffee Preset",
+      "name": "CoffeeBase",
+      "displayName": "Coffee Preset Base",
       "description": "Preset to use with the Coffee Engine",
-      "binaryDir": "${sourceDir}/build",
-      "installDir": "${sourceDir}/../install",
       "cacheVariables": {
         "CMAKE_CXX_STANDARD": "20",
         "CMAKE_CXX_STANDARD_REQUIRED": "ON",
@@ -16,6 +14,23 @@
         "COFFEE_GRAPHICS_DEBUG": "ON",
         "COFFEE_RENDERER_DEBUG": "OFF"
       }
+    },
+    {
+      "name": "CoffeeLinux",
+      "displayName": "Coffee Linux Preset",
+      "description": "Preset to use with the Coffee Engine",
+      "binaryDir": "${sourceDir}/build/linux",
+      "installDir": "${sourceDir}/../install/linux",
+      "inherits": "CoffeeBase"
+    },
+    {
+      "name": "CoffeeWindows",
+      "displayName": "Coffee Windows Preset",
+      "description": "Preset to use with the Coffee Engine",
+      "binaryDir": "${sourceDir}/build/windows",
+      "installDir": "${sourceDir}/../install/windows",
+      "toolchainFile": "${sourceDir}/cmake/windows-toolchain.cmake",
+      "inherits": "CoffeeBase"
     }
   ]
 }

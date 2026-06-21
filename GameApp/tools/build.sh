@@ -1,5 +1,9 @@
 #!/bin/bash
 
-cmake -S . -B ./build
-cmake --build ./build
-cmake --install ./build --prefix ../install
+cmake -S . --preset GameAppLinux
+cmake --build ./build/linux
+cmake --install ./build/linux --prefix ../install/linux
+
+cmake --preset GameAppWindows -S .
+cmake --build ./build/windows
+cmake --install ./build/windows

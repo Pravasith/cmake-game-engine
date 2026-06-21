@@ -14,7 +14,8 @@ target_sources(game PRIVATE game.cpp)
 # --- BAD ---
 
 # --- GOOD ---
-find_package(Coffee REQUIRED PATHS ../install)
+find_package(Coffee REQUIRED PATHS ../install/linux)
+
 target_link_libraries(game PRIVATE Coffee::Coffee)
 # OR target_link_libraries(game PRIVATE Coffee::Core Coffee::Graphics)
 # --- GOOD ---

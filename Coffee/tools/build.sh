@@ -1,5 +1,9 @@
 #!/bin/bash
 
-cmake --preset Coffee -S .
-cmake --build ./build
-cmake --install ./build
+cmake --preset CoffeeLinux -S .
+cmake --build ./build/linux
+cmake --install ./build/linux
+
+cmake --preset CoffeeWindows -S .
+cmake --build ./build/windows
+cmake --install ./build/windows
