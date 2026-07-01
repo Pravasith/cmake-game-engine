@@ -13,38 +13,6 @@ https://youtube.com/playlist?list=PLT3_V-u3v5xc&si=kNVKLSD9XcdhNS0n
 
 ______________________________________________________________________
 
-## Project Structure
-
-```txt
-.
-├── Coffee/              # Main C++ library/project
-│   ├── include/         # Public headers
-│   ├── src/             # Source files
-│   ├── cmake/           # CMake package/config files
-│   ├── tools/           # Project-specific scripts
-│   ├── CMakeLists.txt
-│   └── CMakePresets.json
-│
-├── GameApp/             # Example app/game using Coffee
-│   ├── game.cpp
-│   ├── cmake/
-│   ├── tools/
-│   ├── CMakeLists.txt
-│   └── CMakePresets.json
-│
-├── third-party/         # Git submodules / external dependencies
-├── tools/               # Root helper scripts
-│   ├── setup.sh
-│   └── build.sh
-│
-├── .gitmodules
-├── .gitignore
-├── LICENSE
-└── README.md
-```
-
-______________________________________________________________________
-
 ## Requirements
 
 You need:
@@ -121,6 +89,38 @@ This project demonstrates practical CMake concepts such as:
 - Consuming an installed CMake package
 - Using Git submodules for third-party dependencies
 - Keeping setup/build scripts simple
+
+______________________________________________________________________
+
+## Project Structure
+
+```txt
+.
+├── Coffee/              # Main C++ library/project
+│   ├── include/         # Public headers
+│   ├── src/             # Source files
+│   ├── cmake/           # CMake package/config files
+│   ├── tools/           # Project-specific scripts
+│   ├── CMakeLists.txt
+│   └── CMakePresets.json
+│
+├── GameApp/             # Example app/game using Coffee
+│   ├── game.cpp
+│   ├── cmake/
+│   ├── tools/
+│   ├── CMakeLists.txt
+│   └── CMakePresets.json
+│
+├── third-party/         # Git submodules / external dependencies
+├── tools/               # Root helper scripts
+│   ├── setup.sh
+│   └── build.sh
+│
+├── .gitmodules
+├── .gitignore
+├── LICENSE
+└── README.md
+```
 
 ______________________________________________________________________
 
