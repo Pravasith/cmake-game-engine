@@ -71,19 +71,6 @@ git clone https://github.com/gameenginedude/cmake-game-engine.git
 cd Coffee
 ```
 
-```bash
-./tools/setup.sh
-```
-
-The setup script runs:
-
-```bash
-git submodule sync
-git submodule update --init --recursive
-```
-
-This downloads the dependencies inside the `third-party/` folder.
-
 ______________________________________________________________________
 
 ## Setup and Build Scripts
