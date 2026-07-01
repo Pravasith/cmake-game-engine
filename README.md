@@ -109,29 +109,6 @@ logic can stay inside each project’s own `tools/` folder.
 
 ______________________________________________________________________
 
-## Manual Build
-
-You can also build the projects manually.
-
-### Build Coffee
-
-```bash
-cd Coffee
-cmake -S . -B build
-cmake --build build
-cmake --install build --prefix ../install
-```
-
-### Build GameApp
-
-```bash
-cd ../GameApp
-cmake -S . -B build
-cmake --build build
-```
-
-______________________________________________________________________
-
 ## What This Repo Demonstrates
 
 This project demonstrates practical CMake concepts such as:
