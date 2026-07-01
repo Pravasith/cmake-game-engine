@@ -71,8 +71,6 @@ git clone https://github.com/gameenginedude/cmake-game-engine.git
 cd Coffee
 ```
 
-Then initialize the submodules:
-
 ```bash
 ./tools/setup.sh
 ```
@@ -88,7 +86,25 @@ This downloads the dependencies inside the `third-party/` folder.
 
 ______________________________________________________________________
 
-## Building
+## Setup and Build Scripts
+
+Make sure the scripts are executable:
+
+```bash
+chmod +x ./tools/setup.sh
+chmod +x ./tools/build.sh
+```
+
+### Setup
+
+```bash
+./tools/setup.sh
+```
+
+Initializes and updates Git submodules. Downloads the dependencies inside the
+`third-party/` folder.
+
+### Build
 
 From the root of the repository, run:
 
@@ -154,33 +170,6 @@ https://youtube.com/playlist?list=PLT3_V-u3v5xc&si=kNVKLSD9XcdhNS0n
 
 The course walks through the project step by step and explains the CMake
 concepts used in this repository.
-
-______________________________________________________________________
-
-## Scripts
-
-### Setup
-
-```bash
-./tools/setup.sh
-```
-
-Initializes and updates Git submodules.
-
-### Build
-
-```bash
-./tools/build.sh
-```
-
-Builds the example project.
-
-Make sure the scripts are executable:
-
-```bash
-chmod +x ./tools/setup.sh
-chmod +x ./tools/build.sh
-```
 
 ______________________________________________________________________
 
